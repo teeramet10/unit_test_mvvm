@@ -10,4 +10,5 @@ import Foundation
 import RxSwift
 protocol ChatRoomRepositoryInterface {
     func getRoomHistory(_ token :String) -> Observable<GetChatHistoryResponse>
+    func login(user: String) -> Observable<GetChatHistoryResponse>
 }

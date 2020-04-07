@@ -16,6 +16,12 @@ class ChatHistoryViewModel{
     var didSuccessGetChatHistory : ((GetChatHistoryResponse)->Void)?
     var didErrorGetChatHistory : ((Error)->Void)?
     
+    var didSuccessLogin : (() -> Void)?
+    var didSuccessLoginFailed : (()->Void)?
+    var didErrorLogin:(()->Void)?
+    
+    var showResultCaculate : ((String)->Void)?
+    
     
     var repository : ChatRoomRepositoryInterface?
     
@@ -23,6 +29,22 @@ class ChatHistoryViewModel{
     
     init(repository :ChatRoomRepositoryInterface ){
         self.repository = repository
+    }
+    
+    
+    func login( username : String){
+         repository?.login(user: username)
+               .observeOn(MainScheduler.instance)
+               .subscribeOn( SerialDispatchQueueScheduler.init(qos: .background))
+               .subscribe(onNext: {response in
+                if (response.success ?? false) {
+                    self.didSuccessLogin?()
+                }else{
+                    self.didSuccessLoginFailed?()
+                }
+               }, onError: {error in
+                self.didErrorLogin?()
+           }, onCompleted: nil, onDisposed: nil)
     }
     
     func getChatHistory(){
@@ -37,5 +59,10 @@ class ChatHistoryViewModel{
                 self.didErrorGetChatHistory?(error)
         }, onCompleted: nil, onDisposed: nil)
      
+    }
+    
+    func calculate(a : Double , b:Double){
+        let result = a+b
+        showResultCaculate?("\(result)")
     }
 }

@@ -12,6 +12,7 @@ class ChatHistoryViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var label : UILabel!
     var viewModel : ChatHistoryViewModel?
     
     
@@ -30,11 +31,22 @@ class ChatHistoryViewController: UIViewController {
             print(error.localizedDescription)
         }
         
+        viewModel?.showResultCaculate = {result in
+            self.label.text = result
+        }
+        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(ChatHistoryTableViewCell.nib, forCellReuseIdentifier: ChatHistoryTableViewCell.identifier)
         
+        
         viewModel?.getChatHistory()
+        
+        
+    }
+    
+    @IBAction func calculate(sender : UIButton){
+        viewModel?.calculate(a: 1, b: 1)
     }
 
 }

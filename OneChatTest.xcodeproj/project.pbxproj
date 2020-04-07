@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A2D8A72243C728700AC2E0B /* OneChatTestLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2D8A71243C728700AC2E0B /* OneChatTestLogin.swift */; };
 		8AB6876A2439CE42003955A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB687692439CE42003955A4 /* AppDelegate.swift */; };
 		8AB6876C2439CE42003955A4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB6876B2439CE42003955A4 /* SceneDelegate.swift */; };
 		8AB6876E2439CE42003955A4 /* ChatHisoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB6876D2439CE42003955A4 /* ChatHisoryViewController.swift */; };
@@ -46,6 +47,7 @@
 /* Begin PBXFileReference section */
 		56FEDAFCD5999703036F1115 /* Pods_OneChatTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneChatTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B071A0BA411B55AA2657F73 /* Pods-OneChatTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneChatTestTests.release.xcconfig"; path = "Target Support Files/Pods-OneChatTestTests/Pods-OneChatTestTests.release.xcconfig"; sourceTree = "<group>"; };
+		8A2D8A71243C728700AC2E0B /* OneChatTestLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneChatTestLogin.swift; sourceTree = "<group>"; };
 		8AB687662439CE42003955A4 /* OneChatTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneChatTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AB687692439CE42003955A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8AB6876B2439CE42003955A4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 			children = (
 				8AB687802439CE48003955A4 /* OneChatTestTests.swift */,
 				8AB687822439CE48003955A4 /* Info.plist */,
+				8A2D8A71243C728700AC2E0B /* OneChatTestLogin.swift */,
 			);
 			path = OneChatTestTests;
 			sourceTree = "<group>";
@@ -421,6 +424,7 @@
 				8AB687A22439DD05003955A4 /* MockChatRoomRepository.swift in Sources */,
 				8AB687A82439E302003955A4 /* ChatHistoryModel.swift in Sources */,
 				8AB687A62439E25C003955A4 /* ChatRoomRepositoryInterface.swift in Sources */,
+				8A2D8A72243C728700AC2E0B /* OneChatTestLogin.swift in Sources */,
 				8AB687812439CE48003955A4 /* OneChatTestTests.swift in Sources */,
 				8AB687A72439E2FE003955A4 /* GetChatHistoryResponse.swift in Sources */,
 				8AB687AA2439E5EB003955A4 /* ErrorResponse.swift in Sources */,

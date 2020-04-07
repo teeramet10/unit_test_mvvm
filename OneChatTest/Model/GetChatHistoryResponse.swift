@@ -9,6 +9,8 @@
 import Foundation
 import ObjectMapper
 class GetChatHistoryResponse  : Mappable{
+    
+    
     required init?(map: Map) {
         
     }
@@ -19,10 +21,12 @@ class GetChatHistoryResponse  : Mappable{
     
     var  listChat : [ChatRoomModel]? = []
     var  status : String? = ""
+    var  success : Bool? = false
     
     func mapping(map: Map) {
         listChat <- map["listchat"]
         status <- map["status"]
+        success <- map["success"]
     }
     
 }

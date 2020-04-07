@@ -11,6 +11,7 @@ import RxSwift
 import Alamofire
 import AlamofireObjectMapper
 class ChatRoomRepository : ChatRoomRepositoryInterface{
+    
     func getRoomHistory(_ token: String) -> Observable<GetChatHistoryResponse> {
         
         let param = ["tokenuser" : token]
@@ -37,6 +38,10 @@ class ChatRoomRepository : ChatRoomRepositoryInterface{
             }
             return Disposables.create()
         }
+    }
+    
+    func login(user: String) -> Observable<GetChatHistoryResponse> {
+        return Observable.empty()
     }
     
 }

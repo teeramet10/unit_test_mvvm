@@ -20,8 +20,11 @@ class OneChatTestTests: XCTestCase {
     }
     
     func testGetChatHistorySuccess(){
+        
         let expectation = XCTestExpectation(description: "Get Chat History API")
+        
         viewModel = ChatHistoryViewModel.init(repository: MockChatRoomRepository.init(status: "OK"))
+        
         viewModel.didSuccessGetChatHistory = { response in
             XCTAssert(response.listChat?.count ?? 0 > 0)
             XCTAssert(response.status == "OK")
@@ -67,13 +70,16 @@ class OneChatTestTests: XCTestCase {
         viewModel = ChatHistoryViewModel.init(repository: MockChatRoomRepository.init(status: "Failed"))
         viewModel.didSuccessGetChatHistory = { response in
            XCTAssert(response.listChat == nil)
-           XCTFail()
+//           XCTFail()
+            XCTFail()
+           
             expectation.fulfill()
      
         }
         
         viewModel.didErrorGetChatHistory = {error in
             XCTAssert(true)
+    
             expectation.fulfill()
         }
         
