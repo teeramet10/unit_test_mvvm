@@ -8,27 +8,79 @@
 
 import XCTest
 @testable import OneChatTest
-
+import RxBlocking
+import RxSwift
 class OneChatTestTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    var viewModel : ChatHistoryViewModel!
+    var repository : ChatRoomRepositoryInterface!
+    
+    override func setUp() {
+        super.setUp()
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    func testGetChatHistorySuccess(){
+        let expectation = XCTestExpectation(description: "Get Chat History API")
+        viewModel = ChatHistoryViewModel.init(repository: MockChatRoomRepository.init(status: "OK"))
+        viewModel.didSuccessGetChatHistory = { response in
+            XCTAssert(response.listChat?.count ?? 0 > 0)
+            XCTAssert(response.status == "OK")
+            XCTAssert(true)
+            expectation.fulfill()
+           
         }
+        
+        viewModel.didErrorGetChatHistory = {error in
+            XCTFail()
+            expectation.fulfill()
+        }
+        
+        viewModel.getChatHistory()
+        
+         wait(for: [expectation], timeout: 10.0)
     }
+    
+    func testFailedGetChatHistorySuccess(){
+        let expectation = XCTestExpectation(description: "Get Chat History API")
+        
+        
+        viewModel = ChatHistoryViewModel.init(repository: MockChatRoomRepository.init(status: "Failed"))
+        viewModel.didSuccessGetChatHistory = { response in
+            XCTFail()
+            expectation.fulfill()
+        }
+        
+        viewModel.didErrorGetChatHistory = {error in
+            XCTAssert(true)
+//            XCTFail()
+            expectation.fulfill()
+        }
+        
+        viewModel.getChatHistory()
+        
+         wait(for: [expectation], timeout: 10.0)
+    }
+    
+    func testGetChatHistoryFailed(){
+        let expectation = XCTestExpectation(description: "Get Chat History API")
+        
+        viewModel = ChatHistoryViewModel.init(repository: MockChatRoomRepository.init(status: "Failed"))
+        viewModel.didSuccessGetChatHistory = { response in
+           XCTAssert(response.listChat == nil)
+           XCTFail()
+            expectation.fulfill()
+     
+        }
+        
+        viewModel.didErrorGetChatHistory = {error in
+            XCTAssert(true)
+            expectation.fulfill()
+        }
+        
+        viewModel.getChatHistory()
+        
+         wait(for: [expectation], timeout: 10.0)
+    }
+    
 
 }
