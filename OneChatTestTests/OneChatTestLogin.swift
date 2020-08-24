@@ -99,4 +99,30 @@ class OneChatTestLogin: XCTestCase {
         
         wait(for: [expectation], timeout: 10.0)
     }
+    
+    
+    func testlogin_username_wrong1(){
+        let expectation = XCTestExpectation(description: "Get Chat History API")
+        
+        viewModel = ChatHistoryViewModel(repository: MockChatRoomRepository.init(status: "OK"))
+        
+        viewModel.didErrorLogin = {
+            XCTFail()
+            expectation.fulfill()
+        }
+        
+        viewModel.didSuccessLogin = {
+            XCTFail()
+            expectation.fulfill()
+        }
+        
+        viewModel.didSuccessLoginFailed = {
+            XCTAssert(true)
+            expectation.fulfill()
+        }
+        
+        viewModel.login(username: "test")
+        
+        wait(for: [expectation], timeout: 10.0)
+    }
 }
