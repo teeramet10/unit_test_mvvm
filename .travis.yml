@@ -1,8 +1,8 @@
 osx_image: xcode11.6
 language: swift
 os: osx
-xcode_project: OneChatTest.xcworkspace
-xcode_scheme: OneChatTest
+xcode_project: OneChatTest.xcodeproj
+xcode_scheme: OneChatTestTests
 xcode_destination: platform=iOS Simulator,OS=13.6,name=iPhone 11
 before_install:
-  pod install
+  gem install cocoapods
