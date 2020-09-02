@@ -7,8 +7,8 @@ target 'OneChatTest' do
 
   # Pods for OneChatTest
 
-  pod 'Alamofire'
-  pod 'AlamofireObjectMapper'
+  pod 'Alamofire' , '~> 5.0.0-rc.2'
+  pod 'AlamofireObjectMapper', '~> 6.2.0'
   pod 'RxSwift', '~> 5'
   pod 'RxCocoa', '~> 5'
 
@@ -19,6 +19,7 @@ target 'OneChatTest' do
     # Pods for testing
     pod 'RxBlocking', '~> 5'
     pod 'RxTest', '~> 5'
+     pod 'RxSwift', '~> 5'
   end
 
 end

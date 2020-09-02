@@ -16,8 +16,8 @@ PODS:
     - RxSwift (~> 5)
 
 DEPENDENCIES:
-  - Alamofire
-  - AlamofireObjectMapper
+  - Alamofire (~> 5.0.0-rc.2)
+  - AlamofireObjectMapper (~> 6.2.0)
   - RxBlocking (~> 5)
   - RxCocoa (~> 5)
   - RxSwift (~> 5)
@@ -44,6 +44,6 @@ SPEC CHECKSUMS:
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   RxTest: 711632d5644dffbeb62c936a521b5b008a1e1faa
 
-PODFILE CHECKSUM: 6380692fcf11c4adba3898c1d029198eec6d8871
+PODFILE CHECKSUM: 55e3af655668b30f5d700f7c5711cf55bbd70a22
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.1
