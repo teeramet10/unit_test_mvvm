@@ -14,9 +14,9 @@ class ChatRoomRepository : ChatRoomRepositoryInterface{
     
     func getRoomHistory(_ token: String) -> Observable<GetChatHistoryResponse> {
         
-        let param = ["tokenuser" : token]
+
         return Observable<GetChatHistoryResponse>.create{e in
-            let request =  AF.request("https://chat-message-api.herokuapp.com/list_chat", method: .get, parameters: param, encoder: JSONParameterEncoder.default)
+            let request =  AF.request("https://chat-message-api.herokuapp.com/list_chat", method: .get, encoding:  JSONEncoding.default)
            
            request.responseObject{(response : DataResponse<GetChatHistoryResponse,AFError> ) in
         
