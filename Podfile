@@ -19,7 +19,7 @@ target 'OneChatTest' do
     # Pods for testing
     pod 'RxBlocking', '~> 5'
     pod 'RxTest', '~> 5'
-     pod 'RxSwift', '~> 5'
+    pod 'RxSwift', '~> 5'
   end
 
 end
