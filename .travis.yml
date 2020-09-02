@@ -4,5 +4,5 @@ os: osx
 xcode_project: OneChatTest.xcodeproj
 xcode_scheme: OneChatTestTests
 xcode_destination: platform=iOS Simulator,OS=13.6,name=iPhone 11
-script:
+before_install:
   pod install
