@@ -22,7 +22,6 @@
 		8AB687982439D03A003955A4 /* ChatRoomRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB687972439D03A003955A4 /* ChatRoomRepository.swift */; };
 		8AB6879B2439D055003955A4 /* ChatRoomRepositoryInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB6879A2439D055003955A4 /* ChatRoomRepositoryInterface.swift */; };
 		8AB6879D2439D08F003955A4 /* GetChatHistoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB6879C2439D08F003955A4 /* GetChatHistoryResponse.swift */; };
-		8AB687A12439DCFB003955A4 /* MockChatRoomRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB6879E2439D0FA003955A4 /* MockChatRoomRepository.swift */; };
 		8AB687A22439DD05003955A4 /* MockChatRoomRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB6879E2439D0FA003955A4 /* MockChatRoomRepository.swift */; };
 		8AB687A42439DDAE003955A4 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB687A32439DDAE003955A4 /* ErrorResponse.swift */; };
 		8AB687A52439E24E003955A4 /* ChatHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB687912439CF97003955A4 /* ChatHistoryViewModel.swift */; };
@@ -402,7 +401,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8AB687A12439DCFB003955A4 /* MockChatRoomRepository.swift in Sources */,
 				8AB687982439D03A003955A4 /* ChatRoomRepository.swift in Sources */,
 				8AB6876E2439CE42003955A4 /* ChatHisoryViewController.swift in Sources */,
 				8AB6876A2439CE42003955A4 /* AppDelegate.swift in Sources */,

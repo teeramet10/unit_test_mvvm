@@ -8,8 +8,7 @@
 
 import XCTest
 @testable import OneChatTest
-import RxBlocking
-import RxSwift
+
 class OneChatTestTests: XCTestCase {
 
     var viewModel : ChatHistoryViewModel!
