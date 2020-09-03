@@ -8,6 +8,8 @@
 
 import Foundation
 import RxSwift
+@testable import OneChatTest
+
 class MockChatRoomRepository : ChatRoomRepositoryInterface{
     
     var status = "OK"

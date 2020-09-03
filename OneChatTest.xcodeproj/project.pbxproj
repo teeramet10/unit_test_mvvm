@@ -154,6 +154,7 @@
 		8AB6877F2439CE48003955A4 /* OneChatTestTests */ = {
 			isa = PBXGroup;
 			children = (
+				8AB687A02439D12F003955A4 /* mock */,
 				8AB687802439CE48003955A4 /* OneChatTestTests.swift */,
 				8AB687822439CE48003955A4 /* Info.plist */,
 				8A2D8A71243C728700AC2E0B /* OneChatTestLogin.swift */,
@@ -191,7 +192,6 @@
 		8AB687962439D029003955A4 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				8AB687A02439D12F003955A4 /* mock */,
 				8AB687992439D046003955A4 /* interface */,
 				8AB687972439D03A003955A4 /* ChatRoomRepository.swift */,
 			);
