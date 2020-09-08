@@ -3,18 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8A2D8A72243C728700AC2E0B /* OneChatTestLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2D8A71243C728700AC2E0B /* OneChatTestLogin.swift */; };
+		8A2D8A72243C728700AC2E0B /* OneChatTestLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2D8A71243C728700AC2E0B /* OneChatTestLogin.swift */; platformFilter = ios; };
 		8AB6876A2439CE42003955A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB687692439CE42003955A4 /* AppDelegate.swift */; };
 		8AB6876C2439CE42003955A4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB6876B2439CE42003955A4 /* SceneDelegate.swift */; };
 		8AB6876E2439CE42003955A4 /* ChatHisoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB6876D2439CE42003955A4 /* ChatHisoryViewController.swift */; };
 		8AB687712439CE42003955A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AB6876F2439CE42003955A4 /* Main.storyboard */; };
 		8AB687732439CE47003955A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AB687722439CE47003955A4 /* Assets.xcassets */; };
 		8AB687762439CE47003955A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AB687742439CE47003955A4 /* LaunchScreen.storyboard */; };
-		8AB687812439CE48003955A4 /* OneChatTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB687802439CE48003955A4 /* OneChatTestTests.swift */; };
+		8AB687812439CE48003955A4 /* OneChatTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB687802439CE48003955A4 /* OneChatTestTests.swift */; platformFilter = ios; };
 		8AB6878E2439CED7003955A4 /* ChatHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB6878C2439CED7003955A4 /* ChatHistoryTableViewCell.swift */; };
 		8AB6878F2439CED7003955A4 /* ChatHistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AB6878D2439CED7003955A4 /* ChatHistoryTableViewCell.xib */; };
 		8AB687922439CF97003955A4 /* ChatHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB687912439CF97003955A4 /* ChatHistoryViewModel.swift */; };
@@ -22,13 +22,13 @@
 		8AB687982439D03A003955A4 /* ChatRoomRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB687972439D03A003955A4 /* ChatRoomRepository.swift */; };
 		8AB6879B2439D055003955A4 /* ChatRoomRepositoryInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB6879A2439D055003955A4 /* ChatRoomRepositoryInterface.swift */; };
 		8AB6879D2439D08F003955A4 /* GetChatHistoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB6879C2439D08F003955A4 /* GetChatHistoryResponse.swift */; };
-		8AB687A22439DD05003955A4 /* MockChatRoomRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB6879E2439D0FA003955A4 /* MockChatRoomRepository.swift */; };
+		8AB687A22439DD05003955A4 /* MockChatRoomRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB6879E2439D0FA003955A4 /* MockChatRoomRepository.swift */; platformFilter = ios; };
 		8AB687A42439DDAE003955A4 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB687A32439DDAE003955A4 /* ErrorResponse.swift */; };
-		8AB687A52439E24E003955A4 /* ChatHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB687912439CF97003955A4 /* ChatHistoryViewModel.swift */; };
-		8AB687A62439E25C003955A4 /* ChatRoomRepositoryInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB6879A2439D055003955A4 /* ChatRoomRepositoryInterface.swift */; };
-		8AB687A72439E2FE003955A4 /* GetChatHistoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB6879C2439D08F003955A4 /* GetChatHistoryResponse.swift */; };
-		8AB687A82439E302003955A4 /* ChatHistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB687942439CFC1003955A4 /* ChatHistoryModel.swift */; };
-		8AB687AA2439E5EB003955A4 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB687A32439DDAE003955A4 /* ErrorResponse.swift */; };
+		8AB687A52439E24E003955A4 /* ChatHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB687912439CF97003955A4 /* ChatHistoryViewModel.swift */; platformFilter = ios; };
+		8AB687A62439E25C003955A4 /* ChatRoomRepositoryInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB6879A2439D055003955A4 /* ChatRoomRepositoryInterface.swift */; platformFilter = ios; };
+		8AB687A72439E2FE003955A4 /* GetChatHistoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB6879C2439D08F003955A4 /* GetChatHistoryResponse.swift */; platformFilter = ios; };
+		8AB687A82439E302003955A4 /* ChatHistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB687942439CFC1003955A4 /* ChatHistoryModel.swift */; platformFilter = ios; };
+		8AB687AA2439E5EB003955A4 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB687A32439DDAE003955A4 /* ErrorResponse.swift */; platformFilter = ios; };
 		A9F2DC6B831874F5A259920D /* Pods_OneChatTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F71EAAA84C63A8067B6A912D /* Pods_OneChatTestTests.framework */; };
 		DA41458E60BEF76F86674AFE /* Pods_OneChatTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56FEDAFCD5999703036F1115 /* Pods_OneChatTest.framework */; };
 /* End PBXBuildFile section */
@@ -434,6 +434,7 @@
 /* Begin PBXTargetDependency section */
 		8AB6877E2439CE48003955A4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
+			platformFilter = ios;
 			target = 8AB687652439CE42003955A4 /* OneChatTest */;
 			targetProxy = 8AB6877D2439CE48003955A4 /* PBXContainerItemProxy */;
 		};
