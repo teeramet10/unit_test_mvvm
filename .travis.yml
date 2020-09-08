@@ -7,6 +7,9 @@ xcode_destination: platform=iOS Simulator,OS=13.6,name=iPhone 11
 before_install:
   - gem install cocoapods
   - pod update
+branches:
+only:
+  - master
 
 script:
  - set -o pipefail && xcodebuild -workspace OneChatTest.xcworkspace -scheme OneChatTestTests -destination platform\=iOS\ Simulator,OS\=13.6,name\=iPhone\ 11 build test | xcpretty
