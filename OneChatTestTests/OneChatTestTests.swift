@@ -10,7 +10,7 @@ import XCTest
 @testable import OneChatTest
 
 class OneChatTestTests: XCTestCase {
-
+    
     var viewModel : ChatHistoryViewModel!
     var repository : ChatRoomRepositoryInterface!
     
@@ -29,7 +29,7 @@ class OneChatTestTests: XCTestCase {
             XCTAssert(response.status == "OK")
             XCTAssert(true)
             expectation.fulfill()
-           
+            
         }
         
         viewModel.didErrorGetChatHistory = {error in
@@ -39,7 +39,7 @@ class OneChatTestTests: XCTestCase {
         
         viewModel.getChatHistory()
         
-         wait(for: [expectation], timeout: 10.0)
+        wait(for: [expectation], timeout: 10.0)
     }
     
     func testFailedGetChatHistorySuccess(){
@@ -54,13 +54,13 @@ class OneChatTestTests: XCTestCase {
         
         viewModel.didErrorGetChatHistory = {error in
             XCTAssert(true)
-//            XCTFail()
+            //            XCTFail()
             expectation.fulfill()
         }
         
         viewModel.getChatHistory()
         
-         wait(for: [expectation], timeout: 10.0)
+        wait(for: [expectation], timeout: 10.0)
     }
     
     func testGetChatHistoryFailed(){
@@ -68,24 +68,24 @@ class OneChatTestTests: XCTestCase {
         
         viewModel = ChatHistoryViewModel.init(repository: MockChatRoomRepository.init(status: "Failed"))
         viewModel.didSuccessGetChatHistory = { response in
-           XCTAssert(response.listChat == nil)
-//           XCTFail()
+            XCTAssert(response.listChat == nil)
+            //XCTFail()
             XCTFail()
-           
+            
             expectation.fulfill()
-     
+            
         }
         
         viewModel.didErrorGetChatHistory = {error in
             XCTAssert(true)
-    
+            
             expectation.fulfill()
         }
         
         viewModel.getChatHistory()
         
-         wait(for: [expectation], timeout: 10.0)
+        wait(for: [expectation], timeout: 10.0)
     }
     
-
+    
 }
