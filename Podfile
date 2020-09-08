@@ -16,10 +16,9 @@ target 'OneChatTest' do
 
   target 'OneChatTestTests' do
     inherit! :search_paths
-    # Pods for testing
+    
     pod 'RxBlocking', '~> 5'
     pod 'RxTest', '~> 5'
-    pod 'RxSwift', '~> 5'
   end
 
 end
